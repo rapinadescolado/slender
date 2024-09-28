@@ -10,6 +10,7 @@ var mouseX = 0;
 var mouseY = 0;
 var speed = 1;
 var cameradowntimer = 0;
+const light = document.getElementById("light");
 
 const slender = document.getElementById("slender");
 const slenderImg = document.getElementById("slenderImg");
@@ -52,6 +53,13 @@ const playerCode = setInterval(() => {
         rotate = rotate > 360 ? 0 : rotate;
         rotate = rotate < 0 ? 360 : rotate;
     }
+
+    if (mouseY < 100) {
+        light.style.backgroundImage = "url(img/flashlight.png)";
+    } else {
+        light.style.backgroundImage = "url(img/dark.png)";
+    }
+
 
     let radians = rotate * (Math.PI / 180);
 

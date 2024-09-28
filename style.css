@@ -6,6 +6,7 @@
 }
 
 body {
+    background-color: #010101;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,7 +19,7 @@ body {
     position: relative;
     width: 100vw;
     height: 40vw;
-    background: linear-gradient(#010101, #2f2222);
+    background: linear-gradient(#020202, #08080b);
     overflow: hidden;
 }
 
@@ -39,7 +40,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: url(img/grass.png);
-    background-size: 200px;
+    background-size: 1000px;
 }
 
 #slender {
@@ -58,4 +59,17 @@ body {
 #test {
     color: #fff;
     z-index: 100; 
+}
+
+#light {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 110vw;
+    height: 110vh;
+    background-image: url(img/dark.png);
+    background-size: 110vw 110vh;
+    opacity: 0.998;
+    z-index: 100;
+    transform: perspective(1000px) translateZ(-1px) translate(-50%, -50%);
 }
